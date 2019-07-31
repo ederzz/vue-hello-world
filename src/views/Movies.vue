@@ -1,17 +1,15 @@
 <template>
-    <div id="app">
-        <router-view />
+    <div>
+        电影
     </div>
 </template>
 
 <script>
 export default {
-  name: 'App',
+
 };
 </script>
 
 <style lang="less" scoped>
-    body {
-        margin: 0;
-    }
+
 </style>

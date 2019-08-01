@@ -1,5 +1,5 @@
 <template>
-    <router-link :style="style" class="nav" :to="to">
+    <router-link class="nav" :to="to">
         <strong
             :style="titleStyle"
             class="title"
@@ -26,12 +26,6 @@ export default {
     titleColor: {
       type: String,
       default: '',
-    },
-    style: {
-      type: Object,
-      default() {
-        return {};
-      },
     },
   },
   computed: {

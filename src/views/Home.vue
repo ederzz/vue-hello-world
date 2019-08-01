@@ -1,6 +1,7 @@
 <template>
 <div class="home">
     <div class="header">
+        <search />
         <div class="nav-box">
             <HomeNav
                 v-for="item in navList"
@@ -17,11 +18,13 @@
 
 <script>
 import HomeNav from '@/components/HomeNav.vue';
+import Search from '@/components/Home/Search.vue';
 
 export default {
   name: 'home',
   components: {
     HomeNav,
+    Search,
   },
   data() {
     return {

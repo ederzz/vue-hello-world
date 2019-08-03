@@ -1,44 +1,44 @@
 <template>
-    <router-link class="nav" :to="to">
+    <router-link :class="$style.nav" :to="to">
         <strong
             :style="titleStyle"
-            class="title"
+            :class="$style.title"
         >{{ title }}</strong>
-        <span class="content">{{ content }}</span>
+        <span :class="$style.content">{{ content }}</span>
     </router-link>
 </template>
 
 <script>
 export default {
-  props: {
-    title: {
-      type: String,
-      default: '',
+    props: {
+        title: {
+            type: String,
+            default: '',
+        },
+        content: {
+            type: String,
+            default: '',
+        },
+        to: {
+            type: String,
+            default: '/',
+        },
+        titleColor: {
+            type: String,
+            default: '',
+        },
     },
-    content: {
-      type: String,
-      default: '',
+    computed: {
+        titleStyle() {
+            return {
+                color: this.titleColor,
+            };
+        },
     },
-    to: {
-      type: String,
-      default: '/',
-    },
-    titleColor: {
-      type: String,
-      default: '',
-    },
-  },
-  computed: {
-    titleStyle() {
-      return {
-        color: this.titleColor,
-      };
-    },
-  },
 };
 </script>
 
-<style lang="less" scoped>
+<style lang="less" module>
     @content_color: #818181;
     @title_font_size: 23px;
     @content_font_size: 13px;

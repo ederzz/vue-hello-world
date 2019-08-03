@@ -1,7 +1,7 @@
 <template>
-    <div class="search-bar">
+    <div :class="$style['search-bar']">
         <input
-            :class="{ search: true, focused }"
+            :class="{ [$style.search]: true, [$style.focused]: focused }"
             v-click-outside="clickOutSide"
             placeholder="搜索书/影/音/小组"
             @focus="inputFocus"
@@ -11,23 +11,26 @@
 
 <script>
 export default {
-  data() {
-    return {
-      focused: false,
-    };
-  },
-  methods: {
-    inputFocus() {
-      this.focused = true;
+    data() {
+        return {
+            focused: false,
+        }
     },
-    clickOutSide() {
-      this.focused = false;
+    methods: {
+        inputFocus() {
+            this.focused = true
+        },
+        clickOutSide() {
+            this.focused = false
+        },
     },
-  },
-};
+    mounted() {
+        // console.log(this.$style)
+    }
+}
 </script>
 
-<style lang="less" scoped>
+<style lang="less" module>
     @search_bg: #f3f3f3;
 
     .search-bar {

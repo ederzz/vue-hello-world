@@ -1,6 +1,8 @@
 module.exports = {
-    lintOnSave: true,
-    css: {
-        modules: true,
-    },
+    devServer: {
+        overlay: {
+          warnings: true,
+          errors: true
+        }
+    }, // 浏览器显示告警
 };

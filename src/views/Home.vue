@@ -30,6 +30,16 @@
                 </rank-item>
             </div>
         </section>
+        <section :class="$style['comments-list']">
+            <h2 :class="$style['sub-title']">豆瓣热门评论</h2>
+            <div>
+                <topic-item 
+                    v-for="topic in topicsList"
+                    :key="topic.id"
+                    :topic="topic"
+                />
+            </div>
+        </section>
     </div>
 </template>
 
@@ -41,6 +51,7 @@ import RankItem from '@/components/Home/RankItem.vue'
 import WeekMovieRank from '@/components/Home/WeekMovieRank.vue'
 import WeekTvRank from '@/components/Home/WeekTvRank.vue'
 import Top250 from '@/components/Home/Top250.vue'
+import TopicItem from '@/components/TopicItem.vue'
 
 export default {
     name: 'home',
@@ -50,7 +61,8 @@ export default {
         RankItem,
         Top250,
         WeekMovieRank,
-        WeekTvRank
+        WeekTvRank,
+        TopicItem
     },
     data() {
         return {
@@ -104,16 +116,19 @@ export default {
     },
     computed: {
         ...mapState('home', [
-            'bangDanList'
+            'bangDanList',
+            'topicsList'
         ])
     },
     methods: {
         ...mapActions('home', [
-            'bangDan'
+            'bangDan',
+            'topics'
         ])
     },
     mounted() {
         this.bangDan()
+        this.topics()
     }
 };
 </script>
@@ -124,6 +139,8 @@ export default {
     @sub_title_font_size: 21px;
 
     .home {
+        padding-bottom: 100px;
+
         .sub-title {
             margin: 0 0 20px;
             font-size: @sub_title_font_size;
@@ -151,7 +168,11 @@ export default {
         }
 
         .rank-list {
-            padding: 18px;
+            padding: 15px;
+        }
+
+        .comments-list {
+            padding: 0 15px;
         }
     }
 </style>

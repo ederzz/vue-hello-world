@@ -1,0 +1,58 @@
+{
+    "data": [
+        {
+            "img": "https://img1.doubanio.com/img/files/file-1543460329.png",
+            "movieImg": "http://img.withmeclub.com/aY44ZPkxZixazxPP.jpg",
+            "movies": [
+                {
+                    "name": "肖申克的救赎",
+                    "rate": 9.7
+                },
+                {
+                    "name": "霸王别姬",
+                    "rate": 9.6
+                },
+                {
+                    "name": "这个杀手不太冷",
+                    "rate": 9.4
+                }
+            ]
+        },
+        {
+            "img": "",
+            "movieImg": "http://img.withmeclub.com/Ax6XybJHw3nHa563.jpg",
+            "movies": [
+                {
+                    "name": "哪吒之魔童降世",
+                    "rate": 8.6
+                },
+                {
+                    "name": "银河补习班",
+                    "rate": 6.2
+                },
+                {
+                    "name": "狮子王",
+                    "rate": 7.4
+                }
+            ]
+        },
+        {
+            "img": "",
+            "movieImg": "http://img.withmeclub.com/ybZbH8ZR6PQTCSwh.jpg",
+            "movies": [
+                {
+                    "name": "长安十二时辰",
+                    "rate": 8.6
+                },
+                {
+                    "name": "人生一串 第二季",
+                    "rate": 8.2
+                },
+                {
+                    "name": "手术两百年",
+                    "rate": 9.4
+                }
+            ]
+        }
+    ]
+}

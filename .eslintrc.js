@@ -8,6 +8,7 @@ module.exports = {
         '@vue/airbnb',
     ],
     rules: {
+        'space-in-parens': 0,
         'object-shorthand': 0,
         'func-names': 0,
         'eol-last': 0,

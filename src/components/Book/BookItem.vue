@@ -1,5 +1,5 @@
 <template>
-    <li :class="$style['book-item']">
+    <div :class="$style['book-item']">
         <div :class="$style.cover">
             <img :src="cover" />
         </div>
@@ -21,7 +21,7 @@
             </span>
             <span :class="$style.rate">{{ rate }}</span>
         </div>
-    </li>
+    </div>
 </template>
 
 <script>

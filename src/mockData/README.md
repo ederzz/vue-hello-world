@@ -5,3 +5,6 @@
 - suggestion.json 为你推荐
 - bangDan.json 豆瓣榜单
 - hotComment.json 热点评论
+- book1.json 虚构类图书
+- book2.json 最受关注的书
+- book3.json 豆瓣书店

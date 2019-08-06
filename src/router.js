@@ -40,7 +40,7 @@ export default new Router({
         {
             path: '/life',
             name: 'Life',
-            component: () => import('./views/Life.vue'),
+            component: () => import('./views/Product.vue'),
         },
     ],
 });

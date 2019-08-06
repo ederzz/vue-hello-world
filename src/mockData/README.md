@@ -9,4 +9,4 @@
 - book2.json 最受关注的书
 - book3.json 豆瓣书店
 - group.json 兴趣小组
-- doupin.json 豆品
+- product.json 豆品

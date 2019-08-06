@@ -1,7 +1,8 @@
 <template>
     <div :class="$style['book-item']">
-        <div :class="$style.cover">
-            <img :src="cover" />
+        <div 
+            :style='{ backgroundImage: `url( ${ cover } )` }'
+            :class="$style.cover">
         </div>
         <div :class="$style.title">{{ title }}</div>
         <div :class="$style.rating">
@@ -69,7 +70,7 @@ export default {
         .cover {
             width: 100px;
             height: 142px;
-            border: 1px solid red; // TODO:
+            background-size: 100% 100%;
         }
 
         .title {

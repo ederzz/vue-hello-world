@@ -7,10 +7,12 @@
                 <span>{{ topic.comments_count }}回复 · </span>
                 <span>6 小时前</span>
                 <span> · 去App查看</span>
-                <!-- TODO: -->
             </div>
         </div>
-        <div :class="$style['img-wrapper']">
+        <div 
+            v-if="topic.cover_url"
+            :class="$style['img-wrapper']"
+        >
             <img :src="topic.cover_url" />
         </div>
     </a>

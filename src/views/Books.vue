@@ -61,7 +61,7 @@ export default {
             'fetchBooks'
         ])
     },
-    mounted() {
+    created() {
         this.fetchFictionalBooks()
         this.fetchNonFictionalBooks()
         this.fetchBooks()

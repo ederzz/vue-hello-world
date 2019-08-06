@@ -126,7 +126,7 @@ export default {
             'topics'
         ])
     },
-    mounted() {
+    created() {
         this.bangDan()
         this.topics()
     }

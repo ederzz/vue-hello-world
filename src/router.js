@@ -25,7 +25,7 @@ export default new Router({
         {
             path: '/group',
             name: 'Group',
-            component: () => import('./views/InterestGroup.vue'),
+            component: () => import('./views/Group.vue'),
         },
         {
             path: '/book',

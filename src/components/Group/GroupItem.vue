@@ -29,14 +29,6 @@ export default {
             default: 0
         },
     },
-    data() {
-        return {
-            remark: '一切皆安利，把时间用来遇见更好的自己。',
-            img: 'xx',
-            title: '戒掉网络小说',
-            memberCount: 288
-        }
-    }
 }
 </script>
 

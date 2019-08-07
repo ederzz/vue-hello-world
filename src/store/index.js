@@ -3,6 +3,7 @@ import Vuex from 'vuex';
 import home from './modules/home'
 import books from './modules/books'
 import product from './modules/product'
+import group from './modules/group'
 
 Vue.use(Vuex);
 
@@ -26,6 +27,7 @@ export default new Vuex.Store({
     modules: {
         home,
         books,
-        product
+        product,
+        group
     }
 })

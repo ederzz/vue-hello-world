@@ -41,7 +41,6 @@ export default {
     },
     created() {
         this.fetchProducts()
-        console.log(this.products)
     }
 }
 </script>

@@ -28,8 +28,7 @@ export default {
         border-right: solid 1px @border_color;
         font-size: .9rem;
         padding-right: 1.12rem;
-        width: 50%;
-        box-sizing: border-box;
+        width: 41.5%;
         float: left;
 
         &:nth-child(even) {

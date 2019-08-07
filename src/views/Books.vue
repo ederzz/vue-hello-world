@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="overflow: hidden;">
         <section :class="$style['books-section']">
             <header :class="$style.header">
                 <h2 :class="$style['sub-title']">最受关注图书｜虚构类</h2>
@@ -54,7 +54,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section :class="$style['book-types']">
             <header>
                 <h2 :class="$style['sub-title']">分类浏览</h2>
             </header>
@@ -152,9 +152,13 @@ export default {
         }
     }
 
-    .book-types-wrapper {
-        padding: 1.22rem 0 1.88rem;
-        margin-left: .94rem;
-        overflow: hidden;
+    .book-types {
+        margin-right: -25px;
+
+        &-wrapper {
+            padding: 1.22rem 0 1.88rem;
+            margin-left: .94rem;
+            overflow: hidden;
+        }
     }
 </style>

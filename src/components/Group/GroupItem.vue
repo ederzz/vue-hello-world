@@ -1,9 +1,9 @@
 <template>
     <div :class="$style['group-item']">
         <div :class="$style['group_meta']">
-            <img :class="$style['group-icon']" :src="img" />
+            <img :class="$style['group_icon']" :src="img" />
             <span :class="$style['group_title']">{{ title }}</span>
-            <span :class="$style['group_member--count']">{{ memberCount }}</span>
+            <span :class="$style['group_member--count']">{{ memberCount }}人</span>
         </div>
         <div :class="$style['group_topic']">{{ remark }}</div>
     </div>
@@ -40,13 +40,7 @@ export default {
 
     .group-item {
         padding: 15px 18px 15px 0;
-
-        &::after {
-            content: '';
-            display: block;
-            height: 1px;
-            background-color: @border_color;
-        }
+        border-bottom: 1px solid @border_color;
 
         .group_meta {
             display: flex;
@@ -56,6 +50,7 @@ export default {
                 width: 40px;
                 height: 40px;
                 border: 1px solid #f1f1f1;
+                border-radius: 3px;
             }
 
             .group_title {

@@ -36,8 +36,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## TODO:
 
-- lint-staged的 //   "vue-cli-service lint",
-- 将lint-staged的警告放置到save file
-- css modules
-- vue.config.js
-- vue文件format，初始化
+- 更多小组 加载状态的切换 修改标题
+- 音乐的详情页
+- 豆品上的swiper

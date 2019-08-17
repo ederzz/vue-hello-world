@@ -36,6 +36,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## TODO:
 
-- 更多小组 加载状态的切换 修改标题
+- 更多小组 加载状态的切换
 - 音乐的详情页
-- 豆品上的swiper
+- 懒加载

@@ -3,7 +3,7 @@ import Router from 'vue-router';
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
     mode: 'history',
     base: process.env.BASE_URL,
     routes: [
@@ -11,11 +11,17 @@ export default new Router({
             path: '/',
             name: 'home',
             component: () => import('./views/Home.vue'),
+            meta: {
+                title: '豆瓣'
+            }
         },
         {
             path: '/movie',
             name: 'movie',
             component: () => import('./views/Movies.vue'),
+            meta: {
+                title: '电影'
+            }
         },
         {
             path: '/tv',
@@ -44,3 +50,12 @@ export default new Router({
         },
     ],
 });
+
+router.beforeEach((to, from, next) => {
+    if (to.meta.title) {
+        document.title = to.meta.title
+    }
+    next()
+})
+
+export default router

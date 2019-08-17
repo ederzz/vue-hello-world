@@ -1,5 +1,15 @@
 <template>
     <div>
+        <section :class="$style['banner-wrapper']">
+            <van-swipe :width="414" :height="207" :autoplay="3000" indicator-color="white">
+                <van-swipe-item 
+                    v-for="(item, index) in banner" 
+                    :key="index"
+                >
+                    <img :class="$style.banner" :src="item.image" />
+                </van-swipe-item>
+            </van-swipe>
+        </section>
         <section>
             <h2 :class="$style.header">新品首发</h2>
             <div :class="$style['products-wrapper']">
@@ -23,15 +33,19 @@ import {
     mapState,
     mapActions
 } from 'vuex'
+import { Swipe, SwipeItem } from 'vant'
 import ProductItem from '@/components/Product/ProductItem'
 
 export default {
     components: {
-        ProductItem
+        ProductItem,
+        [Swipe.name]: Swipe,
+        [SwipeItem.name]: SwipeItem,
     },
     computed: {
         ...mapState('product', [
-            'products'
+            'products',
+            'banner',
         ])
     },
     methods: {
@@ -41,12 +55,19 @@ export default {
     },
     created() {
         this.fetchProducts()
+        console.log(this.banner)
     }
 }
 </script>
 
 <style lang="less" module>
     @header_color: #3e3a39;
+
+    .banner-wrapper,
+    .banner {
+        width: 100%;
+        height: 207px;
+    }
 
     .header {
         margin: 0;

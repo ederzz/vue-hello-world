@@ -4,6 +4,7 @@ import home from './modules/home'
 import books from './modules/books'
 import product from './modules/product'
 import group from './modules/group'
+import novel from './modules/novel'
 
 Vue.use(Vuex);
 
@@ -28,6 +29,7 @@ export default new Vuex.Store({
         home,
         books,
         product,
-        group
+        group,
+        novel
     }
 })

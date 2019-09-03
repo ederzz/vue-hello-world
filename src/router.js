@@ -24,6 +24,14 @@ const router = new Router({
             }
         },
         {
+            path: '/novel',
+            name: 'novel',
+            component: () => import('./views/InternetNovel.vue'),
+            meta: {
+                title: '网络小说'
+            }
+        },
+        {
             path: '/tv',
             name: 'Tv',
             component: () => import('./views/TvShows.vue'),

@@ -71,10 +71,10 @@ export default {
             },
             navList: [
                 {
-                    title: '电影',
+                    title: '网络小说',
                     content: '找电影/影院热映',
                     titleColor: '#2384E8',
-                    to: '/movie',
+                    to: '/novel',
                 },
                 {
                     title: '追剧',

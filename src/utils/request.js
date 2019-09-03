@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:7002/'
+const baseUrl = process.env.VUE_APP_BASE_URL
 
 export default function request(url, options = {}) {
     const fetchUrl = `${ baseUrl }${ url }`

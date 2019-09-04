@@ -70,6 +70,7 @@ export default {
         ]),
         handleSwitch(cate) {
             this.selectCate = cate
+            this.pageNo = 1
             this.search()
         },
         async search() {

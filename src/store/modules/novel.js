@@ -18,6 +18,7 @@ const actions = {
         if (ret && ret.success === 0) {
             commit('BOOK_LIST', ret.data)
         }
+        return ret && ret.data || {}
     },
 }
 

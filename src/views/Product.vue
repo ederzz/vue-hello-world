@@ -33,14 +33,11 @@ import {
     mapState,
     mapActions
 } from 'vuex'
-import { Swipe, SwipeItem } from 'vant'
 import ProductItem from '@/components/Product/ProductItem'
 
 export default {
     components: {
         ProductItem,
-        [Swipe.name]: Swipe,
-        [SwipeItem.name]: SwipeItem,
     },
     computed: {
         ...mapState('product', [

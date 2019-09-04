@@ -26,10 +26,9 @@ export default {
             type: Array,
             default: () => []
         },
-    },
-    data() {
-        return {
-            selectCate: ''
+        selectCate: {
+            type: String,
+            default: ''
         }
     },
     methods: {
@@ -37,7 +36,6 @@ export default {
             const {
                 cate
             } = e.target.dataset
-            this.selectCate = cate
             this.$emit('switch', cate);
         }
     }

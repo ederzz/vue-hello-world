@@ -83,6 +83,7 @@ export default {
             // TODO: 将滚动监听设置为 指令，什么是指令
             // TODO: 去掉不满足一页情况
             // TODO: pageNo update time
+            // TODO: 注册全局样式，边框线
             if (scrollHeight - scrollTop <= clientHeight + 30 
                 && !this.runLoadMore) {
                 this.runLoadMore = true
@@ -119,6 +120,7 @@ export default {
         top: 0;
         right: 0;
         padding-top: 44px;
+        background-color: #fff;
 
         .header {
             padding: 10px 15px;

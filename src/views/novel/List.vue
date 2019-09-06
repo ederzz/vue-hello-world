@@ -127,6 +127,7 @@ export default {
         top: 0;
         right: 0;
         overflow: auto;
+        background-color: #fff;
 
         .search-panel {
             padding: 20px 0;

@@ -33,8 +33,16 @@ const router = new Router({
         },
         {
             path: '/novel/chapters',
-            name: 'novel-detail',
+            name: 'novel-chapters',
             component: () => import('./views/novel/Chapters.vue'),
+            meta: {
+                title: '网络小说'
+            },
+        },
+        {
+            path: '/novel/content',
+            name: 'novel-content',
+            component: () => import('./views/novel/Content.vue'),
             meta: {
                 title: '网络小说'
             },

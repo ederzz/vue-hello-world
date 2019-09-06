@@ -10,3 +10,8 @@ export const fetchChapters = ({
     pageNo,
     order
 }) => request(`novel/book_chapters?bookid=${ book_id }&pageNo=${ pageNo }&order=${ order }`)
+
+export const chapterContent = ({
+    book_id,
+    chapter_id
+}) => request(`novel/chapter_content?book_id=${ book_id }&chapter_id=${ chapter_id }`)

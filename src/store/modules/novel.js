@@ -2,7 +2,12 @@ import * as services from '@/services/novel'
 
 const state = {
     bookList: [],
-    chapters: []
+    chapters: [],
+    chapterContent: {
+        title: '',
+        content: '',
+        pt: {}
+    }
 }
 
 const mutations = {
@@ -20,6 +25,9 @@ const mutations = {
         } else if (type === 'refresh') {
             state.chapters = data
         }
+    },
+    UPDATE_CONTENT(state, data) {
+        state.chapterContent = data
     }
 }
 
@@ -36,11 +44,18 @@ const actions = {
         ...payload
     }) {
         const ret = await services.fetchChapters(payload)
-        if (ret.errno === 0) {
+        if (ret.success === 0) {
             commit('ADD_CHAPTERS', {
                 data: ret.data.rows,
                 type
             })
+        }
+        return ret
+    },
+    async fetchContent({ commit }, payload) {
+        const ret = await services.chapterContent(payload)
+        if (ret.success === 0) {
+            commit('UPDATE_CONTENT', ret.data)
         }
         return ret
     }

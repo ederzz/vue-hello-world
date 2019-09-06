@@ -1,5 +1,5 @@
 <template>
-    <div :class="$style.chapter">
+    <div @click="nav2content" :class="$style.chapter">
         <div :class="$style.title">{{ info.chapter_title }}</div>
         <div :class="$style['public-time']">{{ +info.public_time * 1000 | formatTime }}</div>
     </div>
@@ -12,7 +12,16 @@ export default {
             type: Object,
             default: () => {}
         }
-    }
+    },
+    methods: {
+        nav2content() {
+            const {
+                book_id,
+                chapter_id
+            } = this.info
+            this.$router.push(`/novel/content?book_id=${ book_id }&chapter_id=${ chapter_id }`)
+        }
+    },
 }
 </script>
 

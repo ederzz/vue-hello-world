@@ -8,7 +8,7 @@
         </header>
         <chapter 
             v-for="item in chapters"
-            :key="item.id"
+            :key="item.chapter_id"
             :info="item"
         />
         <novel-loading :show="runLoadMore" />
@@ -58,7 +58,7 @@ export default {
                 this.container.scrollTop = 0
             }
             this.runLoadMore = false
-            if (ret.errno === 100) {
+            if (ret.success === 100) {
                 this.unScroll()
             }
         },

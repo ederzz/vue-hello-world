@@ -1,5 +1,5 @@
 <template>
-    <div :class="$style['book']">
+    <div @click="nav2detail" :class="$style['book']">
         <div :class="$style.cover">
             <img 
                 :class="$style['cover-img']" 
@@ -35,6 +35,11 @@ export default {
             } = this.detail
             const mainCate = category.split('_')[1]
             return `${ author } · ${ mainCate } · ${ status }`
+        }
+    },
+    methods: {
+        nav2detail() {
+            this.$router.push(`/novel/chapters?book_id=${ this.detail.id }`)
         }
     }
 }

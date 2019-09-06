@@ -26,10 +26,18 @@ const router = new Router({
         {
             path: '/novel',
             name: 'novel',
-            component: () => import('./views/InternetNovel.vue'),
+            component: () => import('./views/novel/List.vue'),
             meta: {
                 title: '网络小说'
-            }
+            },
+        },
+        {
+            path: '/novel/chapters',
+            name: 'novel-detail',
+            component: () => import('./views/novel/Chapters.vue'),
+            meta: {
+                title: '网络小说'
+            },
         },
         {
             path: '/tv',

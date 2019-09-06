@@ -4,3 +4,9 @@ export const fetchBookList = ({
     cate = '',
     pageNo = 1,
 } = {}) => request(`novel/book_list?cate=${ encodeURIComponent(cate) }&pageNo=${ pageNo }&pageSize=20`)
+
+export const fetchChapters = ({
+    book_id,
+    pageNo,
+    order
+}) => request(`novel/book_chapters?bookid=${ book_id }&pageNo=${ pageNo }&order=${ order }`)
